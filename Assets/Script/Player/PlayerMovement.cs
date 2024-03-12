@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public bool FacingLeft { get { return facingLeft; } }
-    
+    public static PlayerMovement Instance;
     [SerializeField]
     private float speed = 1f;
     [SerializeField]
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
+        Instance = this;
     }
     private void Start()
     {

@@ -13,7 +13,6 @@ public class playerShoot : MonoBehaviour
     }
     void Shoot()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log(shootPoint.position);

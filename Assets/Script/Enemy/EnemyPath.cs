@@ -9,14 +9,17 @@ public class EnemyPath : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveDir;
+    private KnockBack knockback;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        knockback = GetComponent<KnockBack>();
     }
 
     private void FixedUpdate()
     {
+        if (knockback.gettingKnockedBack) { return; }
         rb.MovePosition(rb.position + moveDir * (speed * Time.fixedDeltaTime));
     }
 
