@@ -30,5 +30,9 @@ public class FireBallBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.gameObject.GetComponent<Destructible>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
