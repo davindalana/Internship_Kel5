@@ -11465,6 +11465,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+<<<<<<< Updated upstream
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1017756632
@@ -11549,6 +11550,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+=======
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1022254944
@@ -15570,7 +15573,6 @@ GameObject:
   - component: {fileID: 1479691671}
   - component: {fileID: 1479691675}
   - component: {fileID: 1479691674}
-  - component: {fileID: 1479691673}
   - component: {fileID: 1479691672}
   m_Layer: 0
   m_Name: Main Camera
@@ -15628,20 +15630,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1479691673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479691670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0050ba2428dc043459e31bbb309a34a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPos: {fileID: 0}
-  offset: {x: 0, y: 0, z: -10}
 --- !u!81 &1479691674
 AudioListener:
   m_ObjectHideFlags: 0
@@ -17191,6 +17179,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+<<<<<<< Updated upstream
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1569692135
@@ -17275,6 +17264,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+=======
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1603896504
