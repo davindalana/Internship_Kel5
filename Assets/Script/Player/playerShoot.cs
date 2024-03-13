@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerShoot : MonoBehaviour
 {
-    public GameObject fireBall;
+    public GameObject shootBall;
     public Transform shootPoint;
 
     void Update()
@@ -13,11 +13,10 @@ public class playerShoot : MonoBehaviour
     }
     void Shoot()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log(shootPoint.position);
-            Instantiate(fireBall, shootPoint.position, transform.rotation);
+            Instantiate(shootBall, shootPoint.position, transform.rotation);
         }
     }
 }

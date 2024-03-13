@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2109899345629942118}
   - component: {fileID: 5958989246160532862}
-  - component: {fileID: 310093352247987548}
   - component: {fileID: 6004443756664727928}
+  - component: {fileID: 7966384899026320823}
   m_Layer: 8
-  m_Name: Book
+  m_Name: BookFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,27 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &310093352247987548
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310268604328653263}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4aa2359544874050a2e217f13451a30, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6004443756664727928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,5 +98,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ed2a3a22f20481dab2d1b0b9297542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBall: {fileID: 6358548153573283042, guid: 0620be20a00fc471a808dfe93349f61f, type: 3}
+  shootBall: {fileID: 6358548153573283042, guid: 0620be20a00fc471a808dfe93349f61f, type: 3}
   shootPoint: {fileID: 2109899345629942118}
+--- !u!70 &7966384899026320823
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310268604328653263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.021998942, y: 0.09476462}
+  m_Size: {x: 0.27109528, y: 0.27109528}
+  m_Direction: 0

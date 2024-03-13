@@ -1,29 +1,20 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class Book : MonoBehaviour
-// {
-//     // [SerializeField] private WeaponInfo weaponInfo;
-//     [SerializeField] private GameObject firePrefab;
-//     [SerializeField] private Transform fireSpawn;
-//     readonly int FIRE_HASH = Animator.StringToHash("Fire");
+public class Book : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject fireBall;
+    private PlayerController playerControls;
 
-//     private Animator myAnimator;
+    
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+    void Start()
+    {
+    }
 
-//     private void Awake()
-//     {
-//         myAnimator = GetComponent<Animator>();
-//     }
-
-//     public void Attack()
-//     {
-//         myAnimator.SetTrigger(FIRE_HASH);
-//         GameObject newArrow = Instantiate(firePrefab, fireSpawn.position, transform.rotation);
-//     }
-
-//     // public WeaponInfo GetWeaponInfo()
-//     // {
-//     //     return weaponInfo;
-//     // }
-// }
+}
