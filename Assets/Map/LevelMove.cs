@@ -12,6 +12,8 @@ public class LevelMove : MonoBehaviour
 
         if(other.tag == "Player") {
             print("Switching Scene To " + sceneBuildingIndex);
+            Debug.Log("Switch Scene To");
+            Debug.Log("trigger Entered");
             SceneManager.LoadScene(sceneBuildingIndex, LoadSceneMode.Single);
         }
     }
