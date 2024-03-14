@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2109899345629942118}
   - component: {fileID: 5958989246160532862}
-  - component: {fileID: 6004443756664727928}
   - component: {fileID: 7966384899026320823}
+  - component: {fileID: 7277075509306358138}
   m_Layer: 8
   m_Name: BookFire
   m_TagString: Untagged
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6004443756664727928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310268604328653263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ed2a3a22f20481dab2d1b0b9297542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootBall: {fileID: 6358548153573283042, guid: 0620be20a00fc471a808dfe93349f61f, type: 3}
-  shootPoint: {fileID: 2109899345629942118}
 --- !u!70 &7966384899026320823
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,3 +121,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.021998942, y: 0.09476462}
   m_Size: {x: 0.27109528, y: 0.27109528}
   m_Direction: 0
+--- !u!114 &7277075509306358138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310268604328653263}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e667c4939ed5c432eadd28c40eed9afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootBall: {fileID: 6358548153573283042, guid: 0620be20a00fc471a808dfe93349f61f, type: 3}
+  shootPoint: {fileID: 2109899345629942118}
