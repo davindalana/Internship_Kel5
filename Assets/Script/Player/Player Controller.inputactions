@@ -85,15 +85,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "17e12107-4239-4551-a311-aa49d8fcd67f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -107,15 +98,43 @@
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "id": "4162201b-e5b0-4ae5-9690-a199feb80d88",
+            "actions": [
+                {
+                    "name": "Keyboard",
+                    "type": "Value",
+                    "id": "fe51b2fd-4085-40b3-b2e4-622d5922b0f1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8a1dd431-ee17-48b0-927d-e4487dbd7d66",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b90246ee-8dcd-4615-ab76-fdddd345dec4",
-                    "path": "<Mouse>/leftButton",
+                    "id": "b1c68501-f198-40e6-966c-726e11412d15",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Scale(factor=2)",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Keyboard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

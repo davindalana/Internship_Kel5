@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreezeBallBehaviour : MonoBehaviour
+public class WaterBallBehaviour : MonoBehaviour
 {
     [SerializeField]
     public float speed, destroyTime;
@@ -24,6 +24,7 @@ public class FreezeBallBehaviour : MonoBehaviour
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
             enemyHealth.TakeDamage(damageAmount);
+            Debug.Log(damageAmount);
             Destroy(gameObject);
         }
         if (other.CompareTag("Environment"))

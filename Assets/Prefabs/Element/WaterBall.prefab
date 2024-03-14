@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 227887431733906826}
   - component: {fileID: 7430827170838574188}
   m_Layer: 0
-  m_Name: FreezeBall
+  m_Name: WaterBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
