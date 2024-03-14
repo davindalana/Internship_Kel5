@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4853958435459861592}
   - component: {fileID: 2123631792573027238}
-  - component: {fileID: 3342403495735175256}
   - component: {fileID: -8266183830276972628}
+  - component: {fileID: 7522394055523871476}
   m_Layer: 8
   m_Name: BookWater
   m_TagString: Untagged
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3342403495735175256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476073956536627160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ed2a3a22f20481dab2d1b0b9297542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootBall: {fileID: 4043101290313023239, guid: 5d58edadaa4d4427a81fe2e6a309609c, type: 3}
-  shootPoint: {fileID: 4853958435459861592}
 --- !u!70 &-8266183830276972628
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,3 +121,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.021998942, y: 0.09476462}
   m_Size: {x: 0.27109528, y: 0.27109528}
   m_Direction: 0
+--- !u!114 &7522394055523871476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476073956536627160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d14ba3dc9ef544a39994c7a722d0968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootBall: {fileID: 4043101290313023239, guid: 5d58edadaa4d4427a81fe2e6a309609c, type: 3}
+  shootPoint: {fileID: 4853958435459861592}
