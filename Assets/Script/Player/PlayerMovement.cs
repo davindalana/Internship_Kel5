@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        playerControls.Combat.Dash.performed += _ => Dash();
         startingMoveSpeed = speed;
     }
 
@@ -43,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update() {
         PlayerInput();
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Dash();
+        }
     }
 
     private void FixedUpdate() {

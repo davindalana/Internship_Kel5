@@ -23,7 +23,14 @@ public class FireBallBehavior : MonoBehaviour
         if (other.gameObject.GetComponent<EnemyHealth>())
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            if (other.CompareTag("Beast"))
+            {
             enemyHealth.TakeDamage(damageAmount);
+            }
+            if (other.CompareTag("Humanoid"))
+            {
+            enemyHealth.TakeDamage(2*damageAmount);
+            }
             Destroy(gameObject);
         }
         if(other.CompareTag("Environment"))
