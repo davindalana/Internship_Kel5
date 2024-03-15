@@ -74,34 +74,6 @@
             ]
         },
         {
-            "name": "Combat",
-            "id": "3d4146f1-a5bf-45bc-917d-6100394ea38c",
-            "actions": [
-                {
-                    "name": "Dash",
-                    "type": "Button",
-                    "id": "c92abeaf-4104-4065-9317-01d1ea2bd9bc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "f17e8286-c3c5-4054-b87d-53082f3f237a",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "Inventory",
             "id": "4162201b-e5b0-4ae5-9690-a199feb80d88",
             "actions": [
