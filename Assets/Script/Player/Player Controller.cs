@@ -96,34 +96,6 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Combat"",
-            ""id"": ""3d4146f1-a5bf-45bc-917d-6100394ea38c"",
-            ""actions"": [
-                {
-                    ""name"": ""Dash"",
-                    ""type"": ""Button"",
-                    ""id"": ""c92abeaf-4104-4065-9317-01d1ea2bd9bc"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""f17e8286-c3c5-4054-b87d-53082f3f237a"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Dash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
             ""name"": ""Inventory"",
             ""id"": ""4162201b-e5b0-4ae5-9690-a199feb80d88"",
             ""actions"": [
@@ -168,9 +140,6 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
-        // Combat
-        m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
-        m_Combat_Dash = m_Combat.FindAction("Dash", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_Keyboard = m_Inventory.FindAction("Keyboard", throwIfNotFound: true);
@@ -278,52 +247,6 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
     }
     public MovementActions @Movement => new MovementActions(this);
 
-    // Combat
-    private readonly InputActionMap m_Combat;
-    private List<ICombatActions> m_CombatActionsCallbackInterfaces = new List<ICombatActions>();
-    private readonly InputAction m_Combat_Dash;
-    public struct CombatActions
-    {
-        private @PlayerController m_Wrapper;
-        public CombatActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Dash => m_Wrapper.m_Combat_Dash;
-        public InputActionMap Get() { return m_Wrapper.m_Combat; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CombatActions set) { return set.Get(); }
-        public void AddCallbacks(ICombatActions instance)
-        {
-            if (instance == null || m_Wrapper.m_CombatActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_CombatActionsCallbackInterfaces.Add(instance);
-            @Dash.started += instance.OnDash;
-            @Dash.performed += instance.OnDash;
-            @Dash.canceled += instance.OnDash;
-        }
-
-        private void UnregisterCallbacks(ICombatActions instance)
-        {
-            @Dash.started -= instance.OnDash;
-            @Dash.performed -= instance.OnDash;
-            @Dash.canceled -= instance.OnDash;
-        }
-
-        public void RemoveCallbacks(ICombatActions instance)
-        {
-            if (m_Wrapper.m_CombatActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(ICombatActions instance)
-        {
-            foreach (var item in m_Wrapper.m_CombatActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_CombatActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public CombatActions @Combat => new CombatActions(this);
-
     // Inventory
     private readonly InputActionMap m_Inventory;
     private List<IInventoryActions> m_InventoryActionsCallbackInterfaces = new List<IInventoryActions>();
@@ -372,10 +295,6 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
     public interface IMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
-    }
-    public interface ICombatActions
-    {
-        void OnDash(InputAction.CallbackContext context);
     }
     public interface IInventoryActions
     {

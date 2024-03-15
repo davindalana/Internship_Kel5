@@ -23,8 +23,14 @@ public class WaterBallBehaviour : MonoBehaviour
         if (other.gameObject.GetComponent<EnemyHealth>())
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            if (other.CompareTag("Beast"))
+            {
+            enemyHealth.TakeDamage(2*damageAmount);
+            }
+            if (other.CompareTag("Humanoid"))
+            {
             enemyHealth.TakeDamage(damageAmount);
-            Debug.Log(damageAmount);
+            }
             Destroy(gameObject);
         }
         if (other.CompareTag("Environment"))
