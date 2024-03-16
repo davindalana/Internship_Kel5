@@ -12,6 +12,8 @@ public class WaterBallBehaviour : MonoBehaviour
     void Awake()
     {
         Destroy(gameObject, destroyTime);
+     
+
     }
 
     void Update()
