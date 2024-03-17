@@ -72,45 +72,6 @@
                     "isPartOfComposite": true
                 }
             ]
-        },
-        {
-            "name": "Inventory",
-            "id": "4162201b-e5b0-4ae5-9690-a199feb80d88",
-            "actions": [
-                {
-                    "name": "Keyboard",
-                    "type": "Value",
-                    "id": "fe51b2fd-4085-40b3-b2e4-622d5922b0f1",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "8a1dd431-ee17-48b0-927d-e4487dbd7d66",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "Scale",
-                    "groups": "",
-                    "action": "Keyboard",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b1c68501-f198-40e6-966c-726e11412d15",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "Scale(factor=2)",
-                    "groups": "",
-                    "action": "Keyboard",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": []
