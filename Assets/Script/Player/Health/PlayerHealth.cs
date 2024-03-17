@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
   public int health;
   public GameObject[] healthUI;
-    void TakeDamage()
+    public void TakeDamage()
     {
         health--;
         if (health <= 0)
