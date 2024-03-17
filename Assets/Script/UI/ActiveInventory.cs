@@ -1,38 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class ActiveInventory : MonoBehaviour
 {
-        private int activeSlotIndexNum = 0;
+    private int activeSlotIndexNum = 0;
 
-    private PlayerController playerControls;
     [SerializeField] List<PlayerShoot> playerShoots;
 
-    private void Awake() {
-        playerControls = new PlayerController();
+    private void Update()
+    {
+        if(UnityEngine.Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ToggleActiveHighlight(0);
+        }else if(UnityEngine.Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ToggleActiveHighlight(1);
+        }
     }
 
-    private void Start() {
-        playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
-    }
-
-    private void OnEnable() {
-        playerControls.Enable();
-    }
-
-    private void ToggleActiveSlot(int numValue) {
-        ToggleActiveHighlight(numValue - 1);
-    }
-
-    private void ToggleActiveHighlight(int indexNum) {
+    private void ToggleActiveHighlight(int indexNum)
+    {
         activeSlotIndexNum = indexNum;
 
         foreach (Transform inventorySlot in this.transform)
         {
             inventorySlot.GetChild(0).gameObject.SetActive(false);
         }
-        foreach(PlayerShoot playerShoot in playerShoots){
+        foreach (PlayerShoot playerShoot in playerShoots)
+        {
             playerShoot.enabled = false;
         }
         playerShoots[activeSlotIndexNum].enabled = true;
