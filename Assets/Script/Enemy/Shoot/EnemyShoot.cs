@@ -10,6 +10,7 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] private float range;
 
     private GameObject player;
+    
 
     void Start()
     {

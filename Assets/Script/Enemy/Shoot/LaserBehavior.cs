@@ -34,5 +34,9 @@ public class LaserBehavior : MonoBehaviour
             playerHealth.TakeDamage();
             Destroy(gameObject);
         }
+        if (other.CompareTag("Environment"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
