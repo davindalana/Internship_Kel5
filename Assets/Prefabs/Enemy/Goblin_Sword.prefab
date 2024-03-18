@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4505006585660720983}
   - component: {fileID: 6781581686940092532}
   - component: {fileID: 7878725038733700639}
+  - component: {fileID: -4836008887825877354}
   m_Layer: 6
   m_Name: Goblin_Sword
   m_TagString: Untagged
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054393683238601729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 390431f57e6284f95871edd0d481114e, type: 3}
   m_Name: 
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054393683238601729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9cc6d06729434ae28277321439eb45d, type: 3}
   m_Name: 
@@ -296,6 +297,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlash: {fileID: 2100000, guid: 4bc89106ab1704ee6b63d333c26723a0, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &-4836008887825877354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054393683238601729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d57239d11104533947fecbe795c31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  minRange: 0
+  maxRange: 0
+  home: {fileID: 0}
 --- !u!1 &1112161830696691595
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.005, y: 0.243}
+  m_AnchoredPosition: {x: -0.054, y: 0.216}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7509125712559957118
