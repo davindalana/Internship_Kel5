@@ -13,7 +13,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - grass
+  - 
   - Water
   - UI
   - Enemy
@@ -46,6 +46,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Backkground
+  - name: Player
     uniqueID: 3415263163
     locked: 0
