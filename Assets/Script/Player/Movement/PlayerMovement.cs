@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float startingMoveSpeed;
     private bool facingLeft = false;
     private bool isDashing = false;
+    public LayerMask interact;
 
     private void Awake() {
         playerControls = new PlayerController();
@@ -42,15 +43,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update() {
         PlayerInput();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Interact(); 
+        }
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Dash();
         }
     }
+    void Interact()
+    {
+        
+    }
 
     private void FixedUpdate() {
         AdjustPlayerFacingDirection();
         Move();
+        // if(Physics2D.OverlapCircle(transform.position,0.2f,interact)!= null)
+        // {
+        // }
     }
 
     private void PlayerInput() {
