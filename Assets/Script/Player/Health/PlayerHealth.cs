@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-  public int health;
-  public GameObject[] healthUI;
+    public int health;
+    public GameObject[] healthUI;
     public void TakeDamage()
     {
         health--;
@@ -21,10 +21,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-         if(collision.CompareTag("Enemy"))
-         {
+        if (collision.CompareTag("Enemy"))
+        {
             TakeDamage();
-         }
+        }
     }
 
 }
