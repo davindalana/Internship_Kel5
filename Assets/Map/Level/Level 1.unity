@@ -14624,9 +14624,7 @@ PrefabInstance:
       propertyPath: knockBackTime
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5152974986914498124, guid: d8feee1fd037046d685991f77302e5b0, type: 3}
-    - {fileID: 7207652838897430022, guid: d8feee1fd037046d685991f77302e5b0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
