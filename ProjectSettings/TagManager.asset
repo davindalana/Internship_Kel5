@@ -8,6 +8,7 @@ TagManager:
   - Environment
   - Beast
   - Humanoid
+  - Interact
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Enemy
   - Player
   - Book
-  - 
+  - Interact
   - 
   - 
   - 
