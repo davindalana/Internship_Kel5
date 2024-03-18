@@ -7,7 +7,7 @@ public class LevelMove : MonoBehaviour
 {
     public int sceneBuildingIndex;
 
-    private void OnTriggerenter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         print("Trigger Entered");
 
         if(other.tag == "Player") {
